@@ -34,6 +34,12 @@ const rawCard = (
   </Card>
 );
 
+/**
+ * Returns an iframe with an embedded YouTube video, given a YouTube video link.
+ * @param {string} url regular YouTube video link, 
+ *  e.g. https://www.youtube.com/watch?v=QtpIhktaXlc
+ * @returns iframe
+ */
 function embedVideo(url) {
     const videoWidth = 300
     const videoHeight = 150
