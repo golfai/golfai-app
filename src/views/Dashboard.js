@@ -32,8 +32,8 @@ function Dashboard() {
                   </Col>
                   <Col xs="7">
                     <div className="numbers">
-                      <p className="card-category">Number</p>
-                      <Card.Title as="h4">150GB</Card.Title>
+                      <p className="card-category">Total Swings</p>
+                      <Card.Title as="h4">123</Card.Title>
                     </div>
                   </Col>
                 </Row>
@@ -58,8 +58,8 @@ function Dashboard() {
                   </Col>
                   <Col xs="7">
                     <div className="numbers">
-                      <p className="card-category">Revenue</p>
-                      <Card.Title as="h4">$ 1,345</Card.Title>
+                      <p className="card-category">Insights</p>
+                      <Card.Title as="h4">3</Card.Title>
                     </div>
                   </Col>
                 </Row>
@@ -68,7 +68,7 @@ function Dashboard() {
                 <hr></hr>
                 <div className="stats">
                   <i className="far fa-calendar-alt mr-1"></i>
-                  Last day
+                  Last session
                 </div>
               </Card.Footer>
             </Card>
@@ -94,7 +94,7 @@ function Dashboard() {
                 <hr></hr>
                 <div className="stats">
                   <i className="far fa-clock-o mr-1"></i>
-                  In the last hour
+                  Since starting
                 </div>
               </Card.Footer>
             </Card>
@@ -110,8 +110,8 @@ function Dashboard() {
                   </Col>
                   <Col xs="7">
                     <div className="numbers">
-                      <p className="card-category">Followers</p>
-                      <Card.Title as="h4">+45K</Card.Title>
+                      <p className="card-category">Achievements</p>
+                      <Card.Title as="h4">13</Card.Title>
                     </div>
                   </Col>
                 </Row>
@@ -130,33 +130,32 @@ function Dashboard() {
           <Col md="8">
             <Card>
               <Card.Header>
-                <Card.Title as="h4">Users Behavior</Card.Title>
-                <p className="card-category">24 Hours performance</p>
+                <Card.Title as="h4">Average Swings Per Hole</Card.Title>
+                <p className="card-category">performance</p>
               </Card.Header>
               <Card.Body>
                 <div className="ct-chart" id="chartHours">
                   <ChartistGraph
                     data={{
                       labels: [
-                        "9:00AM",
-                        "12:00AM",
-                        "3:00PM",
-                        "6:00PM",
-                        "9:00PM",
-                        "12:00PM",
-                        "3:00AM",
-                        "6:00AM",
+                        "First session",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "Recent Session",
                       ],
                       series: [
-                        [287, 385, 490, 492, 554, 586, 698, 695],
-                        [67, 152, 143, 240, 287, 335, 435, 437],
-                        [23, 113, 67, 108, 190, 239, 307, 308],
+                        [21, 18, 19, 15, 13, 15, 8, 9],
+                        // [20, 152, 143, 240, 287, 335, 435, 437],
+                        // [23, 113, 67, 108, 190, 239, 307, 308],
                       ],
                     }}
                     type="Line"
                     options={{
                       low: 0,
-                      high: 800,
+                      high: 25,
                       showArea: false,
                       height: "245px",
                       axisX: {
@@ -188,9 +187,10 @@ function Dashboard() {
               <Card.Footer>
                 <div className="legend">
                   <i className="fas fa-circle text-info"></i>
-                  Open <i className="fas fa-circle text-danger"></i>
-                  Click <i className="fas fa-circle text-warning"></i>
-                  Click Second Time
+                  User 
+                  {/* <i className="fas fa-circle text-danger"></i> */}
+                  {/* Click <i className="fas fa-circle text-warning"></i>
+                  Click Second Time */}
                 </div>
                 <hr></hr>
                 <div className="stats">

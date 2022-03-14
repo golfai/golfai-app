@@ -26,7 +26,7 @@ class Footer extends Component {
           <nav>
             <ul className="footer-menu">
               <li>
-                <a href="#pablo" onClick={(e) => e.preventDefault()}>
+                <a href="session/overview">
                   Home
                 </a>
               </li>

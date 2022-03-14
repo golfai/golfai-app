@@ -54,6 +54,7 @@ function Sidebar({ color, image, routes }) {
         </div>
         <Nav>
           {routes.map((prop, key) => {
+            if (prop.hidden) return null;
             if (!prop.redirect)
               return (
                 <li
