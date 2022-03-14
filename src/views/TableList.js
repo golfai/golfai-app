@@ -12,8 +12,15 @@ import {
   Row,
   Col,
 } from "react-bootstrap";
+import { useHistory } from "react-router-dom";
 
 function TableList() {
+  const history = useHistory();
+
+  function linkToOverview() {
+    history.push('/admin/session/overview');
+  }
+
   return (
     <>
       <Container fluid>
@@ -38,46 +45,46 @@ function TableList() {
                     </tr>
                   </thead>
                   <tbody>
-                    <tr>
+                    <tr onClick={linkToOverview}>
                       <td>1</td>
                       <td>swing_at_the_greens.csv</td>
                       <td>33</td>
                       <td>3</td>
                       <td>The Greens Range</td>
                     </tr>
-                    <tr>
+                    <tr onClick={linkToOverview}>
                       <td>2</td>
-                      <td>Minerva Hooper</td>
-                      <td>$23,789</td>
-                      <td>Curaçao</td>
-                      <td>Lagrange Golf</td>
-                    </tr>
-                    <tr>
-                      <td>3</td>
-                      <td>Sage Rodriguez</td>
-                      <td>$56,142</td>
-                      <td>Netherlands</td>
-                      <td>The Greens Range</td>
-                    </tr>
-                    <tr>
-                      <td>4</td>
-                      <td>Philip Chaney</td>
-                      <td>$38,735</td>
-                      <td>Korea, South</td>
-                      <td>Lagrange Golf</td>
-                    </tr>
-                    <tr>
+                      <td>lagrange_swing.csv</td>
+                      <td>15</td>
                       <td>5</td>
-                      <td>Doris Greene</td>
-                      <td>$63,542</td>
-                      <td>Malawi</td>
+                      <td>Lagrange Golf</td>
+                    </tr>
+                    <tr onClick={linkToOverview}>
+                      <td>3</td>
+                      <td>greens_practice.csv</td>
+                      <td>40</td>
+                      <td>9</td>
                       <td>The Greens Range</td>
                     </tr>
-                    <tr>
+                    <tr onClick={linkToOverview}>
+                      <td>4</td>
+                      <td>good_day_lagrange.csv</td>
+                      <td>56</td>
+                      <td>11</td>
+                      <td>Lagrange Golf</td>
+                    </tr>
+                    <tr onClick={linkToOverview}>
+                      <td>5</td>
+                      <td>second_greens_day.csv</td>
+                      <td>25</td>
+                      <td>15</td>
+                      <td>The Greens Range</td>
+                    </tr>
+                    <tr onClick={linkToOverview}>
                       <td>6</td>
-                      <td>Mason Porter</td>
-                      <td>$78,615</td>
-                      <td>Chile</td>
+                      <td>first_time_golfing.csv</td>
+                      <td>20</td>
+                      <td>22</td>
                       <td>The Greens Range</td>
                     </tr>
                   </tbody>

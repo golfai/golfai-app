@@ -23,12 +23,12 @@ import Icons from "views/Icons.js";
 import Maps from "views/Maps.js";
 import Notifications from "views/Notifications.js";
 import Upgrade from "views/Upgrade.js";
-import RecommendationsList from "views/RecommendationsList.js";
+import SessionOverview from "./views/SessionOverview";
 
 const dashboardRoutes = [
   {
     upgrade: true,
-    path: "/upgrade",
+    path: "/upload",
     name: "Upload new golf data",
     icon: "nc-icon nc-cloud-upload-94",
     component: Upgrade,
@@ -42,24 +42,17 @@ const dashboardRoutes = [
     layout: "/admin",
   },
   {
+    path: "/sessions",
+    name: "Sessions",
+    icon: "nc-icon nc-notes",
+    component: TableList,
+    layout: "/admin",
+  },
+  {
     path: "/user",
     name: "User Profile",
     icon: "nc-icon nc-circle-09",
     component: UserProfile,
-    layout: "/admin",
-  },
-  {
-    path: "/recommendations",
-    name: "Recommendations",
-    icon: "nc-icon nc-notes",
-    component: RecommendationsList,
-    layout: "/admin",
-  },
-  {
-    path: "/table",
-    name: "Sessions",
-    icon: "nc-icon nc-notes",
-    component: TableList,
     layout: "/admin",
   },
   {
@@ -68,6 +61,7 @@ const dashboardRoutes = [
     icon: "nc-icon nc-paper-2",
     component: Typography,
     layout: "/admin",
+    hidden: true
   },
   {
     path: "/icons",
@@ -75,6 +69,7 @@ const dashboardRoutes = [
     icon: "nc-icon nc-atom",
     component: Icons,
     layout: "/admin",
+    hidden: true
   },
   {
     path: "/maps",
@@ -82,6 +77,7 @@ const dashboardRoutes = [
     icon: "nc-icon nc-pin-3",
     component: Maps,
     layout: "/admin",
+    hidden: true
   },
   {
     path: "/notifications",
@@ -89,7 +85,15 @@ const dashboardRoutes = [
     icon: "nc-icon nc-bell-55",
     component: Notifications,
     layout: "/admin",
+    hidden: true
   },
+  {
+    path: "/session/overview",
+    name: "Session Overview",
+    component: SessionOverview,
+    layout: "/admin",
+    hidden: true
+  }
 ];
 
 export default dashboardRoutes;
