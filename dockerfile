@@ -16,11 +16,8 @@ RUN curl -sL https://deb.nodesource.com/setup_$NODE_VERSION.x | bash
 RUN apt install -y nodejs
 
 # Install npm
-# RUN apt install -y npm
 
 COPY . /app
-
-RUN node -v
 
 RUN npm install
 
