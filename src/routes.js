@@ -29,7 +29,7 @@ const dashboardRoutes = [
     upgrade: true,
     path: "/upgrade",
     name: "Upload new golf data",
-    icon: "nc-icon nc-alien-33",
+    icon: "nc-icon nc-cloud-upload-94",
     component: Upgrade,
     layout: "/admin",
   },
@@ -49,7 +49,7 @@ const dashboardRoutes = [
   },
   {
     path: "/table",
-    name: "Table List",
+    name: "Sessions",
     icon: "nc-icon nc-notes",
     component: TableList,
     layout: "/admin",
