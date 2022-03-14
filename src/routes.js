@@ -23,6 +23,7 @@ import Icons from "views/Icons.js";
 import Maps from "views/Maps.js";
 import Notifications from "views/Notifications.js";
 import Upgrade from "views/Upgrade.js";
+import RecommendationsList from "views/RecommendationsList.js";
 
 const dashboardRoutes = [
   {
@@ -45,6 +46,13 @@ const dashboardRoutes = [
     name: "User Profile",
     icon: "nc-icon nc-circle-09",
     component: UserProfile,
+    layout: "/admin",
+  },
+  {
+    path: "/recommendations",
+    name: "Recommendations",
+    icon: "nc-icon nc-notes",
+    component: RecommendationsList,
     layout: "/admin",
   },
   {
