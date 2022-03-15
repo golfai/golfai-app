@@ -6,3 +6,5 @@ services:
     volumes:
       - ./src:/app/src
       - ./public:/app/public
+    stdin_open: true # docker run -i
+    tty: true        # docker run -t

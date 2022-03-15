@@ -1,4 +1,5 @@
 import React from "react";
+import SwingReplay from "./SwingReplay";
 
 // react-bootstrap components
 import {
@@ -13,15 +14,13 @@ import {
   Table
 } from "react-bootstrap";
 
-const ghostCard = (
+const swingReplayCard = (
   <Card>
     <Card.Header>
-      <Card.Title as="h4">Ghost Overlay</Card.Title>
+      <Card.Title as="h4">Swing Replay</Card.Title>
     </Card.Header>
     <Card.Body className="ml-auto mr-auto">
-      <div style={{paddingBottom: '5vh'}}>
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/PHRkgBIdoFY?start=22" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-      </div>
+        <SwingReplay/>
     </Card.Body>
   </Card>
 );
@@ -98,7 +97,7 @@ const recsCard = (
 function showCard(e, setCard, cardName) {
   e.preventDefault();
   if (cardName === 'ghost') {
-    return setCard(ghostCard)
+    return setCard(swingReplayCard)
   }
 
   if (cardName == 'raw') {
@@ -137,7 +136,7 @@ function SessionOverview() {
                       variant={ (selected === 'ghost') ? 'success' : 'info'}
                       onClick={(e) => { showCard(e, setCard, 'ghost'); setSelected('ghost')}}
                     >
-                      Ghost Overlay
+                      Swing Replay
                     </Button>
                   </Col>
                   <Col lg="4" sm="12" style={{display: 'grid'}}>
