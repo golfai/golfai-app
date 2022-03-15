@@ -14,7 +14,7 @@ import {
 } from "react-bootstrap";
 import { useHistory } from "react-router-dom";
 
-function TableList() {
+function Sessions() {
   const history = useHistory();
 
   function linkToOverview() {
@@ -98,4 +98,4 @@ function TableList() {
   );
 }
 
-export default TableList;
+export default Sessions;

@@ -1,4 +1,5 @@
 import React from "react";
+import SwingVideoPlayer from "./SwingVideoPlayer";
 
 // react-bootstrap components
 import {
@@ -14,16 +15,18 @@ import {
 } from "react-bootstrap";
 
 const ghostCard = (
-  <Card>
-    <Card.Header>
-      <Card.Title as="h4">Ghost Overlay</Card.Title>
-    </Card.Header>
-    <Card.Body className="ml-auto mr-auto">
-      <div style={{paddingBottom: '5vh'}}>
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/PHRkgBIdoFY?start=22" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-      </div>
-    </Card.Body>
-  </Card>
+//   <Card>
+//     <Card.Header>
+//       <Card.Title as="h4">Ghost Overlay</Card.Title>
+//     </Card.Header>
+//     <Card.Body className="ml-auto mr-auto">
+//       <div style={{paddingBottom: '5vh'}}>
+//         <iframe width="560" height="315" src="https://www.youtube.com/embed/PHRkgBIdoFY?start=22" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+//       </div>
+//     </Card.Body>
+//   </Card>
+
+    <SwingVideoPlayer/>
 );
 
 const rawCard = (
