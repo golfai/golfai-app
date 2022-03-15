@@ -22,13 +22,13 @@ import { Nav } from "react-bootstrap";
 
 import logo from "assets/img/reactlogo.png";
 
-function Sidebar({ color, image, routes }) {
+function Sidebar({ image, routes }) {
   const location = useLocation();
   const activeRoute = (routeName) => {
     return location.pathname.indexOf(routeName) > -1 ? "active" : "";
   };
   return (
-    <div className="sidebar" data-image={image} data-color={color}>
+    <div className="sidebar" data-image={image} data-color={"green"}>
       <div
         className="sidebar-background"
         style={{
