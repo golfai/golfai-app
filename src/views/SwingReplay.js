@@ -1,54 +1,33 @@
+import { Canvas } from "@react-three/fiber";
+import { OrbitControls, GizmoHelper, GizmoViewport } from "@react-three/drei";
+import { Suspense } from "react";
+
 import React from "react";
+import GolfDrive from "./GolfDrive";
 
-import * as THREE from "three";
 
-// react-bootstrap components
-import {
-    Badge,
-    Button,
-    Card,
-    Navbar,
-    Nav,
-    Table,
-    Container,
-    Row,
-    Col,
-} from "react-bootstrap";
-import { useHistory } from "react-router-dom";
-
-class SwingReplay extends React.Component {
-    componentDidMount() {
-        // === THREE.JS CODE START ===
-        var scene = new THREE.Scene();
-        var camera = new THREE.PerspectiveCamera(75, 
-            window.innerWidth / window.innerHeight, 0.1, 1000);
-        var renderer = new THREE.WebGLRenderer();
-        renderer.setSize(window.innerWidth * .5, window.innerHeight * .5);
-        
-        const replayDiv = document.getElementById("swing-replay")
-        replayDiv.appendChild(renderer.domElement);
-       
-        var geometry = new THREE.BoxGeometry(1, 1, 1);
-        var material = new THREE.MeshBasicMaterial({ color: 0x00ff00 });
-        var cube = new THREE.Mesh(geometry, material);
-        
-        scene.add(cube);
-        camera.position.z = 5;
-        var animate = function () {
-            requestAnimationFrame(animate);
-            cube.rotation.x += 0.01;
-            cube.rotation.y += 0.01;
-            renderer.render(scene, camera);
-        };
-        animate();
-        // === THREE.JS EXAMPLE CODE END ===
-    }
-
-    render() {
-        return (
-            <div id="swing-replay"/>
-        )
-    };
+export default function SwingReplay() {
+    
+    return (
+        <div id="canvas-container" style={{width:"1000px", height:"500px"}}>
+            <Canvas camera={{ position: [-5, 1, 1], fov: 50, zoom: 1.4 }} dpr={[1, 2]}>
+                <OrbitControls />
+                <GizmoHelper
+                    alignment="bottom-right" // widget alignment within scene
+                    margin={[80, 80]} // widget margins (X, Y)
+                    // onUpdate={/* called during camera animation  */}
+                    // onTarget={/* return current camera target (e.g. from orbit controls) to center animation */}
+                    >
+                    <GizmoViewport axisColors={['red', 'green', 'blue']} labelColor="black" />
+                    {/* alternative: <GizmoViewcube /> */}
+                    </GizmoHelper>
+                <ambientLight intensity={1} />
+                <directionalLight intensity={5} />
+                <Suspense fallback={"null"}>
+                    <GolfDrive />
+                    {/* <Environment preset="park" background /> */}
+                </Suspense>
+            </Canvas>
+        </div>
+    );
 }
-
-export default SwingReplay;
