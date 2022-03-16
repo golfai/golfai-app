@@ -1,5 +1,5 @@
 import { Canvas } from "@react-three/fiber";
-import { OrbitControls, GizmoHelper, GizmoViewport } from "@react-three/drei";
+import { OrbitControls, GizmoHelper, GizmoViewport, Environment } from "@react-three/drei";
 import { Suspense } from "react";
 
 import React from "react";
@@ -10,7 +10,7 @@ export default function SwingReplay() {
     
     return (
         <div id="canvas-container" style={{width:"1000px", height:"500px"}}>
-            <Canvas camera={{ position: [-5, 1, 1], fov: 50, zoom: 1.4 }} dpr={[1, 2]}>
+            <Canvas camera={{ position: [-5, 1, 1], fov: 50, zoom: 1.2 }} dpr={[1, 2]}>
                 <OrbitControls />
                 <GizmoHelper
                     alignment="bottom-right" // widget alignment within scene
@@ -21,11 +21,10 @@ export default function SwingReplay() {
                     <GizmoViewport axisColors={['red', 'green', 'blue']} labelColor="black" />
                     {/* alternative: <GizmoViewcube /> */}
                     </GizmoHelper>
-                <ambientLight intensity={1} />
-                <directionalLight intensity={5} />
+                <ambientLight intensity={2} />
+                <directionalLight intensity={1.5} />
                 <Suspense fallback={"null"}>
                     <GolfDrive />
-                    {/* <Environment preset="park" background /> */}
                 </Suspense>
             </Canvas>
         </div>
