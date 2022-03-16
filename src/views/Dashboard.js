@@ -203,8 +203,8 @@ function Dashboard() {
           <Col md="4">
             <Card>
               <Card.Header>
-                <Card.Title as="h4">Email Statistics</Card.Title>
-                <p className="card-category">Last Campaign Performance</p>
+                <Card.Title as="h4">Swing Statistics</Card.Title>
+                <p className="card-category">Last Game Performance</p>
               </Card.Header>
               <Card.Body>
                 <div
@@ -221,14 +221,14 @@ function Dashboard() {
                 </div>
                 <div className="legend">
                   <i className="fas fa-circle text-info"></i>
-                  Open <i className="fas fa-circle text-danger"></i>
-                  Bounce <i className="fas fa-circle text-warning"></i>
-                  Unsubscribe
+                  On Par <i className="fas fa-circle text-danger"></i>
+                  Above Par <i className="fas fa-circle text-warning"></i>
+                  Below Par
                 </div>
                 <hr></hr>
                 <div className="stats">
                   <i className="far fa-clock"></i>
-                  Campaign sent 2 days ago
+                  Game played 2 days ago
                 </div>
               </Card.Body>
             </Card>
@@ -331,8 +331,8 @@ function Dashboard() {
           <Col md="6">
             <Card className="card-tasks">
               <Card.Header>
-                <Card.Title as="h4">Tasks</Card.Title>
-                <p className="card-category">Backend development</p>
+                <Card.Title as="h4">Golf Social</Card.Title>
+                <p className="card-category">Tasks for achievements</p>
               </Card.Header>
               <Card.Body>
                 <div className="table-full-width">
