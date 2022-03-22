@@ -20,7 +20,7 @@ import { useLocation, NavLink } from "react-router-dom";
 
 import { Nav } from "react-bootstrap";
 
-import logo from "assets/img/reactlogo.png";
+import logo from "assets/img/golfai.png";
 
 function Sidebar({ image, routes }) {
   const location = useLocation();
@@ -38,13 +38,14 @@ function Sidebar({ image, routes }) {
       <div className="sidebar-wrapper">
         <div className="logo d-flex align-items-center justify-content-start">
           <a
-            href="https://www.creative-tim.com?ref=lbd-sidebar"
+            href="/"
             className="simple-text logo-mini mx-1"
           >
             <div className="logo-img">
               <img
-                src={require("assets/img/reactlogo.png").default}
+                src={require("assets/img/golfai.png").default}
                 alt="..."
+                style={{"border-radius": "4px"}}
               />
             </div>
           </a>

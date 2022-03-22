@@ -18,14 +18,14 @@
 import Dashboard from "views/Dashboard.js";
 import UserProfile from "views/UserProfile.js";
 import Sessions from "views/Sessions.js";
-import Upgrade from "views/Upgrade.js";
+import Upgrade from "views/Upload.js";
 import SessionOverview from "./views/SessionOverview";
 
 const dashboardRoutes = [
   {
     upgrade: true,
     path: "/upload",
-    name: "Upload new golf data",
+    name: "Upload new session",
     icon: "nc-icon nc-cloud-upload-94",
     component: Upgrade,
     layout: "/admin",
