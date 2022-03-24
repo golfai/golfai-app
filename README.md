@@ -11,4 +11,4 @@
 2. Navigate to http://localhost:3000.
 
 
-![Golf demo](golf. gif)
+![Golf demo](golf.gif)
