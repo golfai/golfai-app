@@ -40,6 +40,7 @@ function Sessions() {
                       <th className="border-0">ID</th>
                       <th className="border-0">File Name</th>
                       <th className="border-0">Swings</th>
+                      <th className="border-0">Session Focus</th>
                       <th className="border-0">Recommendations</th>
                       <th className="border-0">Location</th>
                     </tr>
@@ -49,6 +50,7 @@ function Sessions() {
                       <td>1</td>
                       <td>swing_at_the_greens.csv</td>
                       <td>33</td>
+                      <td>long game</td>
                       <td>3</td>
                       <td>The Greens Range</td>
                     </tr>
@@ -56,6 +58,7 @@ function Sessions() {
                       <td>2</td>
                       <td>lagrange_swing.csv</td>
                       <td>15</td>
+                      <td>long game</td>
                       <td>5</td>
                       <td>Lagrange Golf</td>
                     </tr>
@@ -63,6 +66,7 @@ function Sessions() {
                       <td>3</td>
                       <td>greens_practice.csv</td>
                       <td>40</td>
+                      <td>short game</td>
                       <td>9</td>
                       <td>The Greens Range</td>
                     </tr>
@@ -70,6 +74,7 @@ function Sessions() {
                       <td>4</td>
                       <td>good_day_lagrange.csv</td>
                       <td>56</td>
+                      <td>follow through</td>
                       <td>11</td>
                       <td>Lagrange Golf</td>
                     </tr>
@@ -77,6 +82,7 @@ function Sessions() {
                       <td>5</td>
                       <td>second_greens_day.csv</td>
                       <td>25</td>
+                      <td>avoid sliding</td>
                       <td>15</td>
                       <td>The Greens Range</td>
                     </tr>
@@ -84,6 +90,7 @@ function Sessions() {
                       <td>6</td>
                       <td>first_time_golfing.csv</td>
                       <td>20</td>
+                      <td>rolling wrists</td>
                       <td>22</td>
                       <td>The Greens Range</td>
                     </tr>
