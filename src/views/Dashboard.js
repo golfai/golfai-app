@@ -147,7 +147,7 @@ function Dashboard() {
                         "Recent Session",
                       ],
                       series: [
-                        [21, 18, 19, 15, 13, 15, 8, 9],
+                        [7, 6, 7, 5, 5, 4, 3, 3],
                         // [20, 152, 143, 240, 287, 335, 435, 437],
                         // [23, 113, 67, 108, 190, 239, 307, 308],
                       ],
@@ -155,7 +155,7 @@ function Dashboard() {
                     type="Line"
                     options={{
                       low: 0,
-                      high: 25,
+                      high: 10,
                       showArea: false,
                       height: "245px",
                       axisX: {
